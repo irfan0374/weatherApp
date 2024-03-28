@@ -83,8 +83,12 @@
     margin-top: 30px; 
     color: white;
     display: flex;
-    justify-content: center;
-    gap:20px
+ justify-content: center;
+    gap:80px
+  }
+  .chart{
+    display: flex;
+    
   }
   
   .element {
@@ -107,4 +111,3 @@
   .icon {
     margin-top: 10px;
   }
-  

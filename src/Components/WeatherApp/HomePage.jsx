@@ -12,6 +12,7 @@ import useGoogleMapApi from '../googleMap'
 import { Autocomplete } from '@react-google-maps/api'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Donut from './Graph'
 
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
 
 
   const [location, setLocation] = useState()
+  const [values,setvalue]=useState()
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput")
@@ -37,6 +39,7 @@ const HomePage = () => {
     if (data.cod == "404") {
       return toast.error("This location is not available")
     }
+    setvalue(data)
 
 
 
@@ -155,6 +158,10 @@ const HomePage = () => {
                 <div className="wind-rate">--</div>
                 <div className="text">wind speed</div>
               </div>
+            </div>
+
+            <div className='chart'>
+            <Donut data={values}/>
             </div>
 
           </div>
