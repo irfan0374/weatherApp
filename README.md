@@ -1,6 +1,7 @@
 
 
 **React Weather App**
+
 This project is a React weather application that utilizes the OpenWeatherMap API to fetch weather data for a given location. It also incorporates Mapbox to retrieve the user's exact location for accurate weather information.
 
 Features:
